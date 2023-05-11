@@ -9,28 +9,12 @@ export default function handler(
   res: NextApiResponse<Issue[]>
 ) {
   const {page , limit} = req.query;
-  let pageNum;
-  let resultsLimit;  
-  
-  if(page && !Array.isArray(page)) {
-    pageNum = Number.parseInt(page);
-  } else {
-    pageNum = 0;
-  }
 
-  if(limit && !Array.isArray(limit)) {
-    resultsLimit = Number.parseInt(limit);
-  }else {
-    resultsLimit = 10;
-  }
+  const pageSize = 10;
 
-  
-  if(pageNum < 0 || resultsLimit <= 0) {
-    pageNum = 0;
-    resultsLimit = 10;
-  }
+  let pageNum = page && !Array.isArray(page) ? Number.parseInt(page) : 0;
+  let resultsLimit = limit && !Array.isArray(limit) ? Number.parseInt(limit) : 10;  
 
-  console.log(pageNum, resultsLimit);
   const issues: Issue[] = data;
-  res.status(200).json(issues.slice(pageNum, resultsLimit));
+  res.status(200).json(issues.slice(pageNum * pageSize, pageNum * pageSize + resultsLimit));
 }
