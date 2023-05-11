@@ -1,20 +1,28 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse } from "next";
 
-import { Issue } from '../types/types';
+import { IssueType, IssueListResponseType } from "../types/types";
 import data from "../data/issue_data.json";
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Issue[]>
+  res: NextApiResponse<IssueListResponseType>
 ) {
-  const {page , limit} = req.query;
+  const { page, limit } = req.query;
 
   const pageSize = 10;
 
   let pageNum = page && !Array.isArray(page) ? Number.parseInt(page) : 0;
-  let resultsLimit = limit && !Array.isArray(limit) ? Number.parseInt(limit) : 10;  
+  let resultsLimit =
+    limit && !Array.isArray(limit) ? Number.parseInt(limit) : 10;
 
-  const issues: Issue[] = data;
-  res.status(200).json(issues.slice(pageNum * pageSize, pageNum * pageSize + resultsLimit));
+  // just faking it with json file for now
+  const issues: IssueType[] = data.slice(
+    pageNum * pageSize,
+    pageNum * pageSize + resultsLimit
+  );
+
+  console.log("Issues Endpoint hit...");
+
+  res.status(200).json({ issues, count: issues.length, totalPages: 2 });
 }

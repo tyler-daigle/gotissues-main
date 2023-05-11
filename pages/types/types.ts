@@ -1,4 +1,4 @@
-export interface Issue {
+export interface IssueType {
   id: string;
   issueTitle: string;
   techUsed: string[];
@@ -8,4 +8,10 @@ export interface Issue {
   issueDescription: string;
   issueLink: string;
   repoLink: string;
+}
+
+export interface IssueListResponseType {
+  issues: IssueType[];
+  count: number;
+  totalPages: number;
 }
