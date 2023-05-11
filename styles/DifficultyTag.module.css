@@ -1,0 +1,19 @@
+.difficultyTag {
+  border-radius: 5px;
+  padding: .15rem .5rem;
+  display: inline-block;
+  color: var(--container-bg-color);
+  font-weight: bold;
+}
+
+.advanced {
+  background-color: var(--advanced-tag-color);
+}
+
+.beginner {
+  background-color: var(--beginner-tag-color);
+}
+
+.intermediate {
+  background-color: var(--intermediate-tag-color);;
+}

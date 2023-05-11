@@ -2,12 +2,14 @@ export interface IssueType {
   id: string;
   issueTitle: string;
   techUsed: string[];
-  difficultyLevel: string; // "beginner" | "intermediate" | "advanced";
+  difficultyLevel: "beginner" | "intermediate" | "advanced";
   issueNumber: number;
   dateCreated: string;
   issueDescription: string;
   issueLink: string;
   repoLink: string;
+  repoName?: string;
+  // TODO: add the repo name into the API
 }
 
 export interface IssueListResponseType {

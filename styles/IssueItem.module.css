@@ -1,0 +1,47 @@
+.issueItem {
+  background-color: var(--container-bg-color);
+  border: solid 1px var(--container-border-color);
+  padding: var(--global-padding);
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.repoName {
+  font-weight: normal;
+}
+.issueTitle {
+  font-weight: normal;
+  font-size: 1rem;
+  color: var(--secondary-header-color);
+}
+
+.issueNumber {
+  color: var(--issue-number-color);
+}
+
+.techUsedList {
+  list-style-type: none;
+  display: flex;
+  gap: .5rem;
+  font-size: .85rem;
+  color: var(--tech-used-color);
+}
+
+.issueStatsContainer {
+  display: flex;
+  gap: .5rem;
+  flex-wrap:wrap;
+  align-items: center;;
+  padding-bottom: .5rem;
+  border-bottom: solid 1px #484848;
+}
+
+.issueDescription {
+  font-size: .9rem;
+  color: slategray;
+}
+
+.descriptionHeader {
+  color: var(--section-header-color);
+  font-weight: normal;
+}

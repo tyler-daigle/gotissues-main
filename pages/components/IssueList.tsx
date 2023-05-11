@@ -1,4 +1,6 @@
 import { IssueType } from "../types/types";
+import styles from "@/styles/IssueList.module.css";
+import { IssueItem } from "./IssueItem";
 
 interface Props {
   issues: IssueType[];
@@ -6,20 +8,14 @@ interface Props {
 
 export default function IssueList({ issues }: Props) {
   return (
-    <div>
-      <h2>List of issues</h2>
-      {issues.map((issue) => (
-        <IssueContainer key={issue.id} issue={issue} />
-      ))}
-    </div>
-  );
-}
-
-function IssueContainer({ issue }: { issue: IssueType }) {
-  return (
-    <div>
-      <h3>{issue.issueTitle}</h3>
-      <p>{issue.issueDescription}</p>
+    <div className={styles.issueListContainer}>
+      <ul className={styles.issueList}>
+        {issues.map((issue) => (
+          <li>
+            <IssueItem key={issue.id} issue={issue} />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

@@ -1,10 +1,14 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
+
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import IssueList from "./components/IssueList";
-
 import { getIssues } from "./queries/getIssues";
+
+/* Components */
+import GotIssuesLogo from "./components/GotIssuesLogo";
+import IssueList from "./components/IssueList";
+import Button from "./components/Button";
 
 export default function Home() {
   const limit = 10;
@@ -32,24 +36,26 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>GotIssues - Github Issue Tracker</h1>
-        {!isLoading && <IssueList issues={data!.issues} />}
+        <GotIssuesLogo />
+        <div className={styles.mainContainer}>
+          {!isLoading && <IssueList issues={data!.issues} />}
 
-        <button
-          type="button"
-          onClick={() => setPageNum(pageNum - 1)}
-          disabled={disablePrevButton}
-        >
-          Prev
-        </button>
+          <div style={{ display: "flex", gap: "1rem", marginTop: " 1rem" }}>
+            <Button
+              onClick={() => setPageNum(pageNum - 1)}
+              disabled={disablePrevButton}
+            >
+              Prev
+            </Button>
 
-        <button
-          type="button"
-          onClick={() => setPageNum(pageNum + 1)}
-          disabled={disableNextButton}
-        >
-          Next
-        </button>
+            <Button
+              onClick={() => setPageNum(pageNum + 1)}
+              disabled={disableNextButton}
+            >
+              Next
+            </Button>
+          </div>
+        </div>
       </main>
     </>
   );

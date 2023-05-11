@@ -1,0 +1,9 @@
+.issueListContainer {
+}
+
+.issueList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--global-padding);
+}

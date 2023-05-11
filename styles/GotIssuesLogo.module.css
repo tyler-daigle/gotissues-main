@@ -1,0 +1,38 @@
+.mainLogoContainer {
+  --logo-color: #FF2CF6;
+  display: flex;
+  gap: 1rem;
+}
+
+.mainLogo {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  font-size:2rem;
+  width: 100%;
+  /* align-items: center;; */
+}
+
+.mainLogoImage {
+  display: none;
+}
+
+.logoLeftSide {
+  color: var(--logo-color);
+}
+
+.logoRightSide {
+  color: var(--main-bg-color);
+  background-color: var(--logo-color);
+  border-radius: 10px;
+}
+
+.logoTagLine {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  .mainLogoImage {
+    display: block;
+  }
+}
