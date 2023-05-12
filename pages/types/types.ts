@@ -17,6 +17,10 @@ export interface ProjectType {
   issues: IssueType[]; // an array of all the issues.
 }
 
+// IssueListResponseType is the type that is returned from
+// the issues endpoint, it is an array of issues along
+// with the number of issues returned and the total number
+// of pages.
 export interface IssueListResponseType {
   issues: IssueType[];
   count: number;
