@@ -12,6 +12,7 @@ export default function handler(
 
   const pageSize = 10;
 
+  // check the params that are passed
   let pageNum = page && !Array.isArray(page) ? Number.parseInt(page) : 0;
   let resultsLimit =
     limit && !Array.isArray(limit) ? Number.parseInt(limit) : 10;
@@ -22,6 +23,7 @@ export default function handler(
     pageNum * pageSize + resultsLimit
   );
 
+  issues.forEach((issue) => (issue.repoName = "This is the repo name"));
   console.log("Issues Endpoint hit...");
 
   res.status(200).json({ issues, count: issues.length, totalPages: 2 });

@@ -6,9 +6,9 @@ import GithubLink from "./GithubLink";
 export function IssueItem({ issue }: { issue: IssueType }) {
   return (
     <div className={styles.issueItem}>
-      <h2 className={styles.repoName}>Name of the Repo</h2>
+      <h2 className={styles.repoName}>{issue.repoName}</h2>
       <ul className={styles.techUsedList}>
-        {issue.techUsed.map((tech) => (
+        {issue.techUsed.split(",").map((tech) => (
           <li className={styles.techItem}>{tech}</li>
         ))}
       </ul>

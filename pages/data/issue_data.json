@@ -2,7 +2,7 @@
   {
     "id": "5af5d5d5-5dd5-5d5d-a5f5-5a5a5a5a5a5a",
     "issueTitle": "Fix typo in README",
-    "techUsed": ["JavaScript"],
+    "techUsed": "JavaScript",
     "difficultyLevel": "beginner",
     "issueNumber": 1,
     "dateCreated": "2022-05-01",
@@ -13,7 +13,7 @@
   {
     "id": "5a5a5a5a-5a55-55d5-8f8f-5d5d5d5d5d5d",
     "issueTitle": "Add new feature",
-    "techUsed": ["React", "TypeScript"],
+    "techUsed": "React,TypeScript",
     "difficultyLevel": "intermediate",
     "issueNumber": 2,
     "dateCreated": "2022-05-02",
@@ -24,7 +24,7 @@
   {
     "id": "5a5a5a5a-5a55-55d5-8f8f-5d5d5d5d5d5e",
     "issueTitle": "Improve performance",
-    "techUsed": ["Node.js", "MongoDB"],
+    "techUsed": "Node.js, MongoDB",
     "difficultyLevel": "advanced",
     "issueNumber": 3,
     "dateCreated": "2022-05-03",
@@ -35,7 +35,7 @@
   {
     "id": "6d6d6d6d-6d66-66d6-a6a6-6a6a6a6a6a6a",
     "issueTitle": "Fix security vulnerability",
-    "techUsed": ["Python"],
+    "techUsed": "Python",
     "difficultyLevel": "advanced",
     "issueNumber": 4,
     "dateCreated": "2022-05-04",
@@ -46,7 +46,7 @@
   {
     "id": "7c7c7c7c-7c77-77c7-b7b7-7b7b7b7b7b7b",
     "issueTitle": "Update dependencies",
-    "techUsed": ["Node.js"],
+    "techUsed": "Node.js",
     "difficultyLevel": "beginner",
     "issueNumber": 5,
     "dateCreated": "2022-05-05",
@@ -57,7 +57,7 @@
   {
     "id": "8e8e8e8e-8e88-88e8-9e9e-8e8e8e8e",
     "issueTitle": "Improve UI/UX",
-    "techUsed": ["React", "CSS"],
+    "techUsed": "React, CSS",
     "difficultyLevel": "intermediate",
     "issueNumber": 6,
     "dateCreated": "2022-05-06",
@@ -68,7 +68,7 @@
   {
     "id": "9b9b9b9b-9b99-99b9-4c4c-9c9c9c9c9c9c",
     "issueTitle": "Add tests",
-    "techUsed": ["Jest"],
+    "techUsed": "Jest",
     "difficultyLevel": "intermediate",
     "issueNumber": 7,
     "dateCreated": "2022-05-07",
@@ -79,7 +79,7 @@
   {
     "id": "1f1f1f1f-1f11-11f1-a1a1-1a1a1a1a1a1a",
     "issueTitle": "Fix broken link",
-    "techUsed": ["HTML"],
+    "techUsed": "HTML",
     "difficultyLevel": "beginner",
     "issueNumber": 8,
     "dateCreated": "2022-05-08",
@@ -90,7 +90,7 @@
   {
     "id": "2g2g2g2g-2g22-22g2-b2b2-2b2b2b2b2b2b",
     "issueTitle": "Refactor code",
-    "techUsed": ["Java"],
+    "techUsed": "Java",
     "difficultyLevel": "advanced",
     "issueNumber": 9,
     "dateCreated": "2022-05-09",
@@ -101,7 +101,7 @@
   {
     "id": "3h3h3h3h-3h33-33h3-c3c3-3c3c3c3c3c3c",
     "issueTitle": "Add internationalization",
-    "techUsed": ["React", "i18n"],
+    "techUsed": "React, i18n",
     "difficultyLevel": "intermediate",
     "issueNumber": 10,
     "dateCreated": "2022-05-10",
@@ -112,7 +112,7 @@
   {
     "id": "4i4i4i4i-4i44-44i4-d4d4-4d4d4d4d4d4d",
     "issueTitle": "Improve error handling",
-    "techUsed": ["Node.js"],
+    "techUsed": "Node.js",
     "difficultyLevel": "advanced",
     "issueNumber": 11,
     "dateCreated": "2022-05-11",
@@ -123,7 +123,7 @@
   {
     "id": "5j5j5j5j-5j55-55j5-e5e5-5e5e5e5e5e5e",
     "issueTitle": "Add dark mode",
-    "techUsed": ["React", "CSS"],
+    "techUsed": "React,CSS",
     "difficultyLevel": "beginner",
     "issueNumber": 12,
     "dateCreated": "2022-05-12",
@@ -134,7 +134,7 @@
   {
     "id": "6k6k6k6k-6k66-66k6-f6f6-6f6f6f6f6f6f",
     "issueTitle": "Update documentation",
-    "techUsed": ["Markdown"],
+    "techUsed": "Markdown",
     "difficultyLevel": "beginner",
     "issueNumber": 13,
     "dateCreated": "2022-05-13",
@@ -145,7 +145,7 @@
   {
     "id": "7l7l7l7l-7l77-77l7-g7g7-7g7g7g7g7g7g",
     "issueTitle": "Improve performance",
-    "techUsed": ["React", "Redux"],
+    "techUsed": "React,Redux",
     "difficultyLevel": "advanced",
     "issueNumber": 14,
     "dateCreated": "2022-05-14",
@@ -156,7 +156,7 @@
   {
     "id": "8m8m8m8m-8m88-88m8-h8h8-8h8h8h8h8h8h",
     "issueTitle": "Fix security vulnerability",
-    "techUsed": ["Node.js", "Express"],
+    "techUsed": "Node.js, Express",
     "difficultyLevel": "advanced",
     "issueNumber": 15,
     "dateCreated": "2022-05-15",
@@ -167,7 +167,7 @@
   {
     "id": "9n9n9n9n-9n99-99n9-i9i9-9i9i9i9i9i9i",
     "issueTitle": "Add feature X",
-    "techUsed": ["React", "Node.js"],
+    "techUsed": "React, Node.js",
     "difficultyLevel": "intermediate",
     "issueNumber": 16,
     "dateCreated": "2022-05-16",
@@ -178,7 +178,7 @@
   {
     "id": "a0a0a0a0-a000-00a0-j0j0-0j0j0j0j0j0j",
     "issueTitle": "Improve user interface",
-    "techUsed": ["React", "CSS"],
+    "techUsed": "React, CSS",
     "difficultyLevel": "intermediate",
     "issueNumber": 17,
     "dateCreated": "2022-05-17",
@@ -189,7 +189,7 @@
   {
     "id": "b1b1b1b1-b111-11b1-k1k1-1k1k1k1k1k1k",
     "issueTitle": "Add feature Y",
-    "techUsed": ["Node.js"],
+    "techUsed": "Node.js",
     "difficultyLevel": "intermediate",
     "issueNumber": 18,
     "dateCreated": "2022-05-18",
@@ -200,7 +200,7 @@
   {
     "id": "c2c2c2c2-c222-22c2-l2l2-2l2l2l2l2l2l",
     "issueTitle": "Fix bug in login",
-    "techUsed": ["React", "Node.js"],
+    "techUsed": "React,Node.js",
     "difficultyLevel": "intermediate",
     "issueNumber": 19,
     "dateCreated": "2022-05-19",
@@ -211,7 +211,7 @@
   {
     "id": "d3d3d3d3-d333-33d3-m3m3-3m3m3m3m3m3m",
     "issueTitle": "Add new endpoint to API",
-    "techUsed": ["Node.js", "Express"],
+    "techUsed": "Node.js, Express",
     "difficultyLevel": "intermediate",
     "issueNumber": 20,
     "dateCreated": "2022-05-20",
