@@ -3,28 +3,39 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 import { IssueType, IssueListResponseType } from "../types/types";
 import data from "../data/issue_data.json";
+import { prisma } from "../util/prisma";
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<IssueListResponseType>
 ) {
-  const { page, limit } = req.query;
+  try {
+    const { page, limit } = req.query;
 
-  const pageSize = 10;
+    const pageSize = 10;
 
-  // check the params that are passed
-  let pageNum = page && !Array.isArray(page) ? Number.parseInt(page) : 0;
-  let resultsLimit =
-    limit && !Array.isArray(limit) ? Number.parseInt(limit) : 10;
+    // check the params that are passed
+    let pageNum = page && typeof page === "string" ? Number.parseInt(page) : 0;
+    let resultsLimit =
+      limit && typeof limit === "string" ? Number.parseInt(limit) : 10;
 
-  // just faking it with json file for now
-  const issues: IssueType[] = data.slice(
-    pageNum * pageSize,
-    pageNum * pageSize + resultsLimit
-  );
+    // just faking it with json file for now
+    // const issues: IssueType[] = data.slice(
+    //   pageNum * pageSize,
+    //   pageNum * pageSize + resultsLimit
+    // );
 
-  issues.forEach((issue) => (issue.repoName = "This is the repo name"));
-  console.log("Issues Endpoint hit...");
+    const issuesArray: IssueType[] = [];
+    // const issueItem = await prisma.issues.findFirstOrThrow();
+    const issuesItems = await prisma.issues.findMany({ take: resultsLimit });
+    issuesArray.push(...issuesItems);
+    console.log("Issues Endpoint hit...");
 
-  res.status(200).json({ issues, count: issues.length, totalPages: 2 });
+    res
+      .status(200)
+      .json({ issues: issuesArray, count: issuesArray.length, totalPages: 2 });
+  } catch (error) {
+    console.error(error.message);
+    res.status(200).json({ issues: [], count: 0, totalPages: 0 }); //TODO: what is the proper way to handle a bad request?
+  }
 }
