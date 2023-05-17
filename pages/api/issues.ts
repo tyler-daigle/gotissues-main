@@ -6,8 +6,11 @@ import { prisma } from "../util/prisma";
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<IssueListResponseType>
+  res: NextApiResponse<IssueListResponseType | string>
 ) {
+  if (req.method !== "GET") {
+    res.status(404).send("<h1>404 - Not Found</h1>");
+  }
   try {
     const { page, limit } = req.query;
 
