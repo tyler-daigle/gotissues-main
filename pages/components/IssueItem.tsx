@@ -21,7 +21,7 @@ export function IssueItem({ issue }: { issue: IssueType }) {
 
       <h4 className={styles.descriptionHeader}>Description</h4>
       <p className={styles.issueDescription}>{issue.issueDescription}</p>
-      <GithubLink url={issue.repoLink} />
+      <GithubLink url={issue.issueLink} />
     </div>
   );
 }

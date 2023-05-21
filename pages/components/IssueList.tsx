@@ -12,7 +12,7 @@ export default function IssueList({ issues }: Props) {
       <ul className={styles.issueList}>
         {issues.map((issue) => (
           <li>
-            <IssueItem key={issue.id} issue={issue} />
+            <IssueItem key={issue.issueId} issue={issue} />
           </li>
         ))}
       </ul>

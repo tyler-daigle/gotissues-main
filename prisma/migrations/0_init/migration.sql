@@ -1,6 +1,7 @@
 -- CreateTable
 CREATE TABLE `issues` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `issue_id` VARCHAR(50) NOT NULL,
     `title` VARCHAR(200) NOT NULL,
     `tech_used` VARCHAR(200) NULL,
     `difficulty_level` VARCHAR(15) NULL,

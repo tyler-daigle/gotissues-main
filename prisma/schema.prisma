@@ -9,14 +9,14 @@ datasource db {
 
 model issues {
   id               Int       @id @default(autoincrement())
-  issueId          String    @unique @map(name: "issue_id")
-  issueTitle       String    @map(name: "title")
-  techUsed         String?   @map(name: "tech_used")
-  difficultyLevel  String?   @map(name: "difficulty_level")
-  issueNumber      Int       @map(name: "issue_number")
-  dateCreated      DateTime? @map(name: "date_created")
-  issueDescription String?   @map(name: "issue_description")
-  issueLink        String?   @map(name: "issue_link")
-  repoLink         String?   @map(name: "repo_link")
-  repoName         String?   @map(name: "repo_name")
+  issueId          String    @map("issue_id") @db.VarChar(50)
+  issueTitle       String    @map("title") @db.VarChar(200)
+  techUsed         String?   @map("tech_used") @db.VarChar(200)
+  difficultyLevel  String?   @map("difficulty_level") @db.VarChar(15)
+  issueNumber      Int       @map("issue_number")
+  dateCreated      DateTime? @map("date_created") @db.Date
+  issueDescription String?   @map("issue_description") @db.Text
+  issueLink        String?   @map("issue_link") @db.VarChar(255)
+  repoLink         String?   @map("repo_link") @db.VarChar(255)
+  repoName         String?   @map("repo_name") @db.VarChar(255)
 }
