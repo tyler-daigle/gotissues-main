@@ -17,3 +17,7 @@
 .intermediate {
   background-color: var(--intermediate-tag-color);;
 }
+
+.none {
+  background-color: rgb(250, 163, 2);;
+}
