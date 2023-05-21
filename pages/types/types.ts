@@ -1,5 +1,6 @@
 export interface IssueType {
   id?: number;
+  issueId?: string;
   issueTitle: string;
   techUsed: string; // csv of strings
   difficultyLevel: "beginner" | "intermediate" | "advanced";
