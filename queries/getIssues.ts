@@ -18,7 +18,11 @@ export async function getIssues(
   };
 
   try {
-    const url = `${serverHost}:${port}/${endpoint}?page=${pageNum}&limit=${limit}&language=${language}&difficulty=${difficultyLevel}`;
+    //
+    // const url = `${serverHost}:${port}/${endpoint}?page=${pageNum}&limit=${limit}&language=${language}&difficulty=${difficultyLevel}`;
+
+    const url = `/api/issues?page=${pageNum}&limit=${limit}&language=${language}&difficulty=${difficultyLevel}`;
+
     const data = await fetch(url);
     issuesResponse = await data.json();
 
