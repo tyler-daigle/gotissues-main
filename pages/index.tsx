@@ -3,15 +3,15 @@ import styles from "@/styles/Home.module.css";
 
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import { getIssues } from "./queries/getIssues";
+import { getIssues } from "../queries/getIssues";
 
 /* Components */
-import GotIssuesLogo from "./components/GotIssuesLogo";
-import IssueList from "./components/IssueList";
-import Button from "./components/Button";
-import SearchForm from "./components/SearchForm";
-import ResultsStats from "./components/ResultsStats";
-import { IssueFilter } from "./types/types";
+import GotIssuesLogo from "../components/GotIssuesLogo";
+import IssueList from "../components/IssueList";
+import Button from "../components/Button";
+import SearchForm from "../components/SearchForm";
+import ResultsStats from "../components/ResultsStats";
+import { IssueFilter } from "../types/types";
 
 export default function Home() {
   const limit = 10;

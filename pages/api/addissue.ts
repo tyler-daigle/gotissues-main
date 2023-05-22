@@ -1,8 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { IssueType, IssueListResponseType } from "../types/types";
-import { prisma } from "../util/prisma";
+import { IssueType, IssueListResponseType } from "../../types/types";
+import { prisma } from "../../util/prisma";
 import { z } from "zod";
 
 export default async function handler(

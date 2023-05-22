@@ -17,7 +17,7 @@ export default function GotIssuesLogo() {
           <span className={styles.logoRightSide}>Issues?</span>
         </h1>
         <p className={styles.logoTagLine}>
-          Help solve other people's Github issues.
+          Help solve other people&apos;s Github issues.
         </p>
       </div>
     </div>
