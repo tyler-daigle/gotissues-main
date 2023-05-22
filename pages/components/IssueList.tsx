@@ -11,8 +11,8 @@ export default function IssueList({ issues }: Props) {
     <div className={styles.issueListContainer}>
       <ul className={styles.issueList}>
         {issues.map((issue) => (
-          <li>
-            <IssueItem key={issue.issueId} issue={issue} />
+          <li key={issue.issueId}>
+            <IssueItem issue={issue} />
           </li>
         ))}
       </ul>

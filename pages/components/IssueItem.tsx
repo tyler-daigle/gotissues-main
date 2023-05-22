@@ -8,8 +8,10 @@ export function IssueItem({ issue }: { issue: IssueType }) {
     <div className={styles.issueItem}>
       <h2 className={styles.repoName}>{issue.repoName}</h2>
       <ul className={styles.techUsedList}>
-        {issue.techUsed.split(",").map((tech) => (
-          <li className={styles.techItem}>{tech}</li>
+        {issue.techUsed.split(",").map((tech, index) => (
+          <li key={tech + index} className={styles.techItem}>
+            {tech}
+          </li>
         ))}
       </ul>
 
