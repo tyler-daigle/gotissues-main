@@ -10,15 +10,18 @@ import GotIssuesLogo from "./components/GotIssuesLogo";
 import IssueList from "./components/IssueList";
 import Button from "./components/Button";
 import SearchForm from "./components/SearchForm";
+import ResultsStats from "./components/ResultsStats";
+import { IssueFilter } from "./types/types";
 
 export default function Home() {
   const limit = 10;
 
   const [pageNum, setPageNum] = useState(0);
-
+  const [filter, setFilter] = useState<IssueFilter>({});
   const { isLoading, error, data } = useQuery({
-    queryKey: [pageNum, limit],
-    queryFn: () => getIssues(pageNum, limit),
+    queryKey: [pageNum, limit, filter],
+    queryFn: () =>
+      getIssues(pageNum, limit, filter.language, filter.difficultyLevel),
   });
 
   if (!isLoading) {
@@ -39,7 +42,16 @@ export default function Home() {
       <main>
         <GotIssuesLogo />
         <div className={styles.mainContainer}>
-          <SearchForm onFilterChange={(filter) => console.log(filter)} />
+          <SearchForm
+            onFilterChange={(curr_filter) => setFilter(curr_filter)}
+          />
+          {!isLoading && (
+            <ResultsStats
+              totalPages={data!.totalPages}
+              numberResults={data!.totalIssues}
+              currPage={pageNum}
+            />
+          )}
           {!isLoading && <IssueList issues={data!.issues} />}
 
           <div style={{ display: "flex", gap: "1rem", marginTop: " 1rem" }}>

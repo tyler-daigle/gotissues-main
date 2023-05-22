@@ -2,7 +2,9 @@ import { IssueType, IssueListResponseType } from "../types/types";
 
 export async function getIssues(
   pageNum: number = 0,
-  limit: number = 0
+  limit: number = 0,
+  language: string = "all",
+  difficultyLevel: string = "all"
 ): Promise<IssueListResponseType> {
   const serverHost = "http://localhost";
   const port = 3000;
@@ -12,10 +14,11 @@ export async function getIssues(
     issues: [],
     count: 0,
     totalPages: 0,
+    totalIssues: 0,
   };
 
   try {
-    const url = `${serverHost}:${port}/${endpoint}?page=${pageNum}&limit=${limit}`;
+    const url = `${serverHost}:${port}/${endpoint}?page=${pageNum}&limit=${limit}&language=${language}&difficulty=${difficultyLevel}`;
     const data = await fetch(url);
     issuesResponse = await data.json();
 

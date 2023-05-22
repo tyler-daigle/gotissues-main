@@ -67,7 +67,12 @@ export default function SearchForm({ onFilterChange }: Props) {
           </select>
         </fieldset>
         <fieldset className={styles.difficultyFieldset}>
-          <label>Difficulty Level</label>
+          <label>
+            Difficulty Level{" "}
+            <span className={styles.diffAbout}>
+              (*not all issues have difficulty labels)
+            </span>
+          </label>
           <DifficultySelector
             value={selectedDifficulty}
             onChange={(diffLevel) => difficultyLevelChanged(diffLevel)}

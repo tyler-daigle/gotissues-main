@@ -26,6 +26,7 @@ export interface IssueListResponseType {
   issues: IssueType[];
   count: number;
   totalPages: number;
+  totalIssues: number;
 }
 
 export interface IssueFilter {

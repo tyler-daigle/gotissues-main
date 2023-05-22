@@ -1,0 +1,14 @@
+.results {
+  display: flex;
+  justify-content: space-between;
+}
+
+.numberIssues {
+  font-weight: bold;
+  color: var(--secondary-header-color);
+}
+
+.pageNum {
+  color:  var(--secondary-header-color);
+  font-weight: bold;
+}

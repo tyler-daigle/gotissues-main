@@ -47,10 +47,10 @@
   font-size: 1.25rem;
 }
 
-.difficultyFieldset {
-  /* border: solid 1px var(--container-border-color); */
+.diffAbout {
+  font-size: .75rem;
+  color: lightgoldenrodyellow;
 }
-
 .difficultyLevelSelector {
   display: grid;
   grid-template-columns: 1fr 1fr;
