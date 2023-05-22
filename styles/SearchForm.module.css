@@ -1,4 +1,43 @@
 
+.formContainer {
+  background-color: var(--container-bg-color);
+  border:  solid 1px var(--container-border-color);
+  padding: 1rem;
+}
+
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formContainer form fieldset {
+  border: none;
+}
+
+.formContainer form label {
+  padding-bottom: .5rem;
+  display: inline-block;
+}
+
+.formHeader {
+  color: var(--secondary-header-color);
+  border-bottom: solid 1px var(--secondary-header-color);
+  margin-bottom: .5rem;
+}
+
+.submitButton {
+  font-family: inherit;
+  font-size: 1.25rem;
+  background-color: var(--container-border-color);
+  color: var(--container-bg-color);
+  border: solid 1px var(--main-bg-color);
+  border-radius: 10px;
+  padding: .25rem 1rem;
+}
+.submitButton:active {
+  filter: brightness(1.25);
+}
 .languageSelect {
   font-family: inherit;
   background-color: var(--container-bg-color);
@@ -6,6 +45,10 @@
   color: var(--main-text-color);
   width: 100%;
   font-size: 1.25rem;
+}
+
+.difficultyFieldset {
+  /* border: solid 1px var(--container-border-color); */
 }
 
 .difficultyLevelSelector {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { IssueFilter, DifficultyLevels } from "../types/types";
 import styles from "@/styles/SearchForm.module.css";
 
@@ -31,37 +31,54 @@ export default function SearchForm({ onFilterChange }: Props) {
     DifficultyLevels.ALL
   );
 
+  const submitForm = (e: FormEvent) => {
+    e.preventDefault();
+    onFilterChange(filter);
+  };
+
   const selectedLanguageChanged = (language: string) => {
     const currFilter = { ...filter, language };
     setSelectedLanguage(language);
     setFilter(currFilter);
-    onFilterChange(currFilter);
   };
 
   const difficultyLevelChanged = (level: string) => {
     const currFilter = { ...filter, difficultyLevel: level };
     setSelectedDifficulty(level);
     setFilter(currFilter);
-    onFilterChange(currFilter);
   };
+
   return (
-    <div>
-      <form>
-        <select
-          className={styles.languageSelect}
-          onChange={(e) => selectedLanguageChanged(e.currentTarget.value)}
-          value={selectedLanguage}
-        >
-          {languages.map((language) => (
-            <option value={language} key={language}>
-              {language}
-            </option>
-          ))}
-        </select>
-        <DifficultySelector
-          value={selectedDifficulty}
-          onChange={(diffLevel) => difficultyLevelChanged(diffLevel)}
-        />
+    <div className={styles.formContainer}>
+      <h2 className={styles.formHeader}>Filter Issues</h2>
+      <form onSubmit={submitForm}>
+        <fieldset>
+          <label htmlFor="languageSelect">Language</label>
+          <select
+            className={styles.languageSelect}
+            onChange={(e) => selectedLanguageChanged(e.currentTarget.value)}
+            value={selectedLanguage}
+          >
+            {languages.map((language) => (
+              <option value={language} key={language}>
+                {language}
+              </option>
+            ))}
+          </select>
+        </fieldset>
+        <fieldset className={styles.difficultyFieldset}>
+          <label>Difficulty Level</label>
+          <DifficultySelector
+            value={selectedDifficulty}
+            onChange={(diffLevel) => difficultyLevelChanged(diffLevel)}
+          />
+        </fieldset>
+
+        <fieldset>
+          <button className={styles.submitButton} type="submit">
+            Update Results
+          </button>
+        </fieldset>
       </form>
     </div>
   );

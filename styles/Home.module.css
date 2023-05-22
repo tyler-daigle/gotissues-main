@@ -1,3 +1,6 @@
 .mainContainer {
   padding: var(--global-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
