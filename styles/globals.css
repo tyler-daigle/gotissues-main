@@ -22,9 +22,9 @@
   --button-bg-color: #888DFF;
   --button-fg-color: #1D1D1D;
 
-  --beginner-tag-color: #74D87E;
-  --intermediate-tag-color: #D8B674;
-  --advanced-tag-color: #D87474;
+  --beginner-tag-color: hsl(126, 56%, 65%);
+  --intermediate-tag-color: hsl(40, 56%, 65%);
+  --advanced-tag-color: hsl(0, 56%, 65%);
 
   --global-padding: 1rem;
   --global-margin: 1rem;

@@ -27,3 +27,17 @@ export interface IssueListResponseType {
   count: number;
   totalPages: number;
 }
+
+export interface IssueFilter {
+  language?: string;
+  difficultyLevel?: string;
+  order?: string;
+}
+
+export const DifficultyLevels = {
+  ADVANCED: "advanced",
+  BEGINNER: "beginner",
+  INTERMEDIATE: "intermediate",
+  NONE: "none",
+  ALL: "all",
+};

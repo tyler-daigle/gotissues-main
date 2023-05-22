@@ -1,0 +1,55 @@
+
+.languageSelect {
+  font-family: inherit;
+  background-color: var(--container-bg-color);
+  border: solid 1px var(--container-border-color);
+  color: var(--main-text-color);
+  width: 100%;
+  font-size: 1.25rem;
+}
+
+.difficultyLevelSelector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;;
+}
+.difficultyLevelSelector span.selected {
+  border: none;
+  color: var(--container-bg-color);
+}
+
+.difficultyLevelSelector span {
+  padding: .25rem 1rem;
+  border-radius: 10px;
+  border: solid 1px var(--main-text-color);
+  color: var(--text-color);
+  cursor: pointer;
+  text-align: center;
+}
+
+.difficultyLevelSelector span:hover {
+  filter:brightness(1.25);
+}
+
+.allSelector.selected {
+  background-color: #c248c2;
+}
+
+.beginnerSelector.selected {
+  background-color: var(--beginner-tag-color);
+}
+
+.intermediateSelector.selected {
+  background-color: var(--intermediate-tag-color);
+}
+
+.advancedSelector.selected {
+  background-color: var(--advanced-tag-color);
+}
+
+@media screen and (min-width: 700px) {
+  .difficultyLevelSelector {
+    display: flex;
+    gap: 1rem;
+  }
+}

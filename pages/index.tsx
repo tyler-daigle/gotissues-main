@@ -9,6 +9,7 @@ import { getIssues } from "./queries/getIssues";
 import GotIssuesLogo from "./components/GotIssuesLogo";
 import IssueList from "./components/IssueList";
 import Button from "./components/Button";
+import SearchForm from "./components/SearchForm";
 
 export default function Home() {
   const limit = 10;
@@ -38,6 +39,7 @@ export default function Home() {
       <main>
         <GotIssuesLogo />
         <div className={styles.mainContainer}>
+          <SearchForm onFilterChange={(filter) => console.log(filter)} />
           {!isLoading && <IssueList issues={data!.issues} />}
 
           <div style={{ display: "flex", gap: "1rem", marginTop: " 1rem" }}>
