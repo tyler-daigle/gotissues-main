@@ -15,7 +15,8 @@ export default async function handler(
   let totalIssues = 0;
   let totalPages = 0;
   try {
-    const { page, limit, difficulty, language } = req.query;
+    const { page, limit, difficulty } = req.query;
+    const language = (req.query.language as string).toLowerCase();
 
     // check the params that are passed
     let pageNum = page && typeof page === "string" ? Number.parseInt(page) : 0;

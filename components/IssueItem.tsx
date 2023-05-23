@@ -4,6 +4,13 @@ import DifficultyTag from "./DifficultyTag";
 import GithubLink from "./GithubLink";
 
 export function IssueItem({ issue }: { issue: IssueType }) {
+  let description = issue.issueDescription;
+  const maxDescLength = 700;
+
+  if (description.length > maxDescLength) {
+    description = description.substring(0, maxDescLength) + "...";
+  }
+
   return (
     <div className={styles.issueItem}>
       <h2 className={styles.repoName}>{issue.repoName}</h2>
@@ -22,7 +29,7 @@ export function IssueItem({ issue }: { issue: IssueType }) {
       </div>
 
       <h4 className={styles.descriptionHeader}>Description</h4>
-      <p className={styles.issueDescription}>{issue.issueDescription}</p>
+      <p className={styles.issueDescription}>{description}</p>
       <GithubLink url={issue.issueLink} />
     </div>
   );

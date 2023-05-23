@@ -14,7 +14,9 @@ export default function ResultsStats({
   return (
     <div className={styles.results}>
       <div>
-        <span className={styles.numberIssues}>{numberResults} issues </span>
+        <span className={styles.numberIssues}>
+          {numberResults} issue{numberResults > 1 ? "s" : ""}{" "}
+        </span>
       </div>
       <div>
         Page <span className={styles.pageNum}>{currPage + 1}</span> of{" "}
