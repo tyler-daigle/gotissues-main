@@ -62,9 +62,9 @@ export default function HelpPage() {
 
             <li>
               Create an issue and label it with the{" "}
-              <strong>"Help Wanted"</strong> label and that is it! You can check
-              the status of the Action in the <strong>Actions</strong> tab on
-              Github to see it run.
+              <strong>&quot;Help Wanted&quot;</strong> label and that is it! You
+              can check the status of the Action in the <strong>Actions</strong>{" "}
+              tab on Github to see it run.
             </li>
           </ol>
 
@@ -82,8 +82,9 @@ export default function HelpPage() {
             This site was created for the <strong>dev.to 2023 Hackathon</strong>
             . You can view the repo at{" "}
             <a href="https://github.com/tyler-daigle/gotissues-main">Github</a>.
-            It still has some work to be done. The filters don't work perfectly
-            yet and there is no sorting yet and I am sure there are other bugs.
+            It still has some work to be done. The filters don&apos;t work
+            perfectly yet and there is no sorting yet and I am sure there are
+            other bugs.
           </p>
           <Link className={styles.goBackLink} href="/">
             Go Back To The Issues
