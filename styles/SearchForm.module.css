@@ -29,7 +29,7 @@
 .submitButton {
   font-family: inherit;
   font-size: 1.25rem;
-  background-color: var(--container-border-color);
+  background-color: var(--main-text-color);
   color: var(--container-bg-color);
   border: solid 1px var(--main-bg-color);
   border-radius: 10px;
