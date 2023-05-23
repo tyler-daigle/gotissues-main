@@ -31,6 +31,11 @@ export default function Home() {
   const disableNextButton = data && pageNum === data.totalPages - 1; // pages start at 0
   const disablePrevButton = pageNum === 0;
 
+  const filterUpdated = (currFilter: IssueFilter) => {
+    setFilter(currFilter);
+    setPageNum(0);
+  };
+
   return (
     <>
       <Head>
@@ -42,9 +47,7 @@ export default function Home() {
       <main>
         <GotIssuesLogo />
         <div className={styles.mainContainer}>
-          <SearchForm
-            onFilterChange={(curr_filter) => setFilter(curr_filter)}
-          />
+          <SearchForm onFilterChange={filterUpdated} />
           {!isLoading && (
             <ResultsStats
               totalPages={data!.totalPages}

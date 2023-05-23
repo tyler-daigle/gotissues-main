@@ -17,21 +17,6 @@ export default async function handler(
   try {
     const { page, limit, difficulty, language } = req.query;
 
-    // let totalIssues = await prisma.issues.count({
-    //   where: {
-    //     techUsed: {
-    //       contains: language
-    //         ? (language as string).toLowerCase()
-    //         : "javascript",
-    //     },
-    //     difficultyLevel: difficulty as string,
-    //   },
-    // });
-    // let totalPages = Math.ceil(totalIssues / pageSize);
-    // console.log(
-    //   `${totalIssues} issues in the database - total Pages ${totalPages}`
-    // );
-
     // check the params that are passed
     let pageNum = page && typeof page === "string" ? Number.parseInt(page) : 0;
     let resultsLimit =
