@@ -12,6 +12,7 @@ import Button from "../components/Button";
 import SearchForm from "../components/SearchForm";
 import ResultsStats from "../components/ResultsStats";
 import { IssueFilter } from "../types/types";
+import Link from "next/link";
 
 export default function Home() {
   const limit = 10;
@@ -47,6 +48,14 @@ export default function Home() {
       <main>
         <GotIssuesLogo />
         <div className={styles.mainContainer}>
+          <nav>
+            <Link className={styles.helpLink} href="/help">
+              About
+            </Link>
+            <Link className={styles.helpLink} href="/help">
+              Help
+            </Link>
+          </nav>
           <SearchForm onFilterChange={filterUpdated} />
           {!isLoading && (
             <ResultsStats

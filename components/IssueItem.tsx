@@ -30,7 +30,7 @@ export function IssueItem({ issue }: { issue: IssueType }) {
 
       <h4 className={styles.descriptionHeader}>Description</h4>
       <p className={styles.issueDescription}>
-        <pre style={{ overflowX: "scroll" }}>{description}</pre>
+        <code style={{ overflow: "hidden" }}>{description}</code>
       </p>
       <GithubLink url={issue.issueLink} />
     </div>

@@ -5,3 +5,14 @@
   gap: 1rem;
   max-width: 1000px;
 }
+
+.mainContainer nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.helpLink {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
