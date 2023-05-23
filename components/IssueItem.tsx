@@ -29,9 +29,9 @@ export function IssueItem({ issue }: { issue: IssueType }) {
       </div>
 
       <h4 className={styles.descriptionHeader}>Description</h4>
-      <p className={styles.issueDescription}>
-        <code style={{ overflow: "hidden" }}>{description}</code>
-      </p>
+      <pre className={styles.issueDescription} style={{ overflow: "hidden" }}>
+        {description}
+      </pre>
       <GithubLink url={issue.issueLink} />
     </div>
   );
