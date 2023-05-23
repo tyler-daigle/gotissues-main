@@ -2,6 +2,7 @@
   --logo-color: #FF2CF6;
   display: flex;
   gap: 1rem;
+  padding: 1rem;
 }
 
 .mainLogo {
