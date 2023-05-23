@@ -48,6 +48,7 @@ export default async function handler(
     const issue = await prisma.issues.create({
       data: issueToAdd,
     });
+
     console.log(issue);
     res
       .status(200)
